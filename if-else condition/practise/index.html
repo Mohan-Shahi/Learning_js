@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practise</title>
+</head>
+<style>
+    body{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+        gap: 40px;
+        flex-direction: column;
+    }
+    body h1{
+        font-family: cursive;
+        color: green;
+        font-size: 40px;
+
+    }
+
+    #display{
+        color: green;
+        margin-right: 15px;
+        padding: 10px 20px;
+        font-size: large;
+        border-radius: 5px;
+    }
+
+    #btn{
+        font-size: large;
+        background-color: green;
+        color: white;
+        border: 2px solid green;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.4 ease;
+    }
+    #btn:hover{
+        background-color: rgb(0, 149, 0);
+
+        opacity: 7;
+    }
+
+</style>
+<body>
+    
+
+    <!-- otp generator -->
+
+    <h1>Generate OTP here</h1>
+    <div>
+        <input type="text" id="display" readonly><button id="btn"
+        onclick="
+            let number = Math.floor(10000+Math.random()*90000);
+            display.value = ` ${number} `
+        "
+        >Generate</button>
+    </div>
+
+
+    <script src="script.js">
+         
+    </script>
+</body>
+</html>

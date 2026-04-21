@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+    <script>
+        // let age = 19;
+        // if (age>18){
+        //     console.log("you can swim!")
+        // }
+        // else{
+        //     console.log("you can't swim! you must me over 18!")
+        // }
+
+
+
+        let age = 60;
+        let gender = 'male';
+        let result;
+
+        if(age<5){
+            result = 'You have free access child!'
+        }
+        else if(age<8){
+            result = 'You have to pay 50% of the ticket!'
+        }
+        else if(age>62){
+            result = 'You have to pay only 30% of the ticket!'
+        }
+        else if(gender === 'female' && age>=8){
+            result = 'Your ticket have 50% off as female!'
+        }
+        else if(age>=8){
+            result= 'You have to pay full!'
+        }
+        else{
+            result = 'Invalid age!'
+        }
+
+        console.log(result)
+        
+    </script>
+</body>
+</html>

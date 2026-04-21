@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<style>
+    body button{
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 5px 40px;
+    }
+</style>
+<body>
+    
+    <h1 id="name">Bat Ball Stump Game</h1>
+    <button id="btn1" onclick="
+
+    let number= Math.floor(Math.random()*10);
+
+    
+    if ( number >= 0 && number <3){
+        computer_move = ` Bat `;
+        display.innerHTML = (`computer move: ${computer_move} ~ your move: Bat <br> Draw `)
+        
+    }
+    else if ( number >=3 && number <6) {
+        computer_move = `Ball`;
+        display.innerHTML = (`computer move: ${computer_move} ~ your move: Bat <br> You Won `)
+    } 
+    else{
+        computer_move = ` Stump`;
+        display.innerHTML = (`computer move: ${computer_move} ~ your move: Bat <br> You Loss `)
+    }
+    console.log(number)
+
+        //   display1.innerHTML = ` ${computer_move} `;
+    " >Bat</button><button id="btn2" onclick="
+        let number1 = Math.floor(Math.random()*10);
+        
+        if ( number1 >= 0 && number1 < 3){
+            computer_move = ` Bat `;
+            display.innerHTML = (`computer move: ${computer_move} ~ your move: Ball <br> You loss `)
+        }
+        else if ( number1 >=3 && number1 <6) {
+            computer_move = `Ball`;
+            display.innerHTML = (`computer move: ${computer_move} ~ your move: Ball <br> Draw`)
+        } 
+        else{
+            computer_move = ` Stump`;
+            display.innerHTML = (`computer move: ${computer_move} ~ your move: Ball <br> You Won `)
+        }
+
+        console.log(number1)
+          
+
+        //   display1.innerHTML = ` ${computer_move} `;
+    " >Ball</button><button id="btn3" onclick="
+    let number2 = Math.floor(Math.random()*10);
+          if ( number2 >= 0 && number2 <3){
+            computer_move = ` Bat `;
+            display.innerHTML = (`computer move: ${computer_move} ~ your move: Stump <br> You Won `)
+        }
+        else if ( number2 >=3 && number2 <6) {
+            computer_move = `Ball`;
+            display.innerHTML = (`computer move: ${computer_move} ~ your move: Stump <br> You Loss `)
+        } 
+        else{
+            computer_move = ` Stump`;
+            display.innerHTML = (`computer move: ${computer_move} ~ your move: Stump <br> Draw `)
+        }
+         
+        console.log(number2)
+          
+
+        //   display1.innerHTML = ` ${computer_move} `;
+    " >Stump</button>
+    <h1 id="display">  </h1>
+    <h1 id="display1">  </h1>
+
+</body>
+   
+<script>
+    
+    let display = document.querySelector("#display")
+    // let display1 = document.querySelector("#display1")
+    // let result = `  `;
+    // let our_move = ``
+
+    let computer_move = ` `;
+
+    
+
+    
+
+    display.innerHTML = ` `;
+    
+    // let number = Math.floor(Math.random()*10);
+
+    // function Computer(){
+    //       if ( number >= 0 && number <3){
+    //     computer_move = ` Bat `;
+    //         }
+    //         else if ( number >=3 && number <6) {
+    //             computer_move = `Ball`;
+    //         } 
+    //         else{
+    //             computer_move = ` Stump`;
+    //         }
+    // }
+    // Computer();
+    // console.log(computer_move)
+
+    
+</script>
+</html>

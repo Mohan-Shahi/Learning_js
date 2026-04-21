@@ -1,0 +1,16 @@
+body{
+   
+}
+
+.btn{
+     background-color: lightgreen;
+     padding: 10px;
+     border-radius: 12px;
+}
+
+#btn1,#btn3{
+    border: none;
+}
+#btn2{
+    background-color: white;
+}
