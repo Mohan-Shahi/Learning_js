@@ -11,96 +11,89 @@
         margin-left: 10px;
         padding: 5px 40px;
     }
+    #display{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
 </style>
 <body>
     
     <h1 id="name">Bat Ball Stump Game</h1>
     <button id="btn1" onclick="
-     
-       Result('Bat')
+        computer_choice = Computer();
+        result = Result('Bat',computer_choice)
+        display.innerHTML = `Your move: Bat ~ Computer move: ${computer_choice} <br> ${result}`;
    
     " >Bat</button><button id="btn2" onclick="
-    
-        Result('Ball')
+        computer_choice = Computer();
+        result = Result('Ball',computer_choice)
+        display.innerHTML = `Your move: Ball ~ Computer move: ${computer_choice} <br> ${result}`;
     " >Ball</button><button id="btn3" onclick="
-     
-        Result('Stump')
-   
+        computer_choice = Computer();
+        result = Result('Stump',computer_choice) 
+        display.innerHTML = `Your move: Stump ~ Computer move: ${computer_choice} <br> ${result}`;  
     " >Stump</button>
     <h1 id="display">  </h1>
-    <h1 id="display1">  </h1>
-
 </body>
    
 <script>
     
     let display = document.querySelector("#display")
-    // let display1 = document.querySelector("#display1")
-    // let result = `  `;
-    // let our_move = ``
-
-    let computer_move ;
-
-    
-
-    
-
-    // display.innerHTML = ` `;
-    
+    let computer_choice;
+    let result;
     
     function Computer(){
         let number = Math.floor(Math.random()*10);
           if ( number >= 0 && number <3){
-                computer_move = `Bat`;
+                return `Bat`;
             }
             else if ( number >=3 && number <6) {
-                computer_move = `Ball`;
+                return `Ball`;
             } 
             else if( number>=6 && number < 10){
-                computer_move = `Stump`;
+                return `Stump`;
             }
             else{
-
-            }
-            console.log(number)
+                 return
+            }      
     }
-    let result;
+    
     
 
-    function Result(my_choice){
-        Computer();
-        if(my_choice === 'Bat'  && computer_move === `Stump`){
-            result = 'You Loss';
+    function Result(my_choice,computer_move){
+        if(my_choice === 'Bat'){
+            if(computer_move === `Bat`){
+                return `Draw`;
+            }
+            else if(computer_move === `Ball`){
+                return `You Won`;
+            }
+            else{
+                return `You Loss`;
+            }
+            
         }
-        else if(my_choice === 'Bat'  && computer_move === `Ball`){
-            result = 'You Won';
-        }
-        else if(my_choice === 'Bat'  && computer_move === `Bat`){
-            result = 'Draw';
-        }
-        else if(my_choice === 'Ball'  && computer_move === `Stump`){
-            result = 'You Won';
-        }
-        else if(my_choice === 'Ball'  && computer_move === `Ball`){
-            result = 'You Draw';
-        }
-        else if(my_choice === 'Ball'  && computer_move === `Bat`){
-            result = 'You Loss';
-        }
-        else if(my_choice === 'Stump'  && computer_move === `Stump`){
-            result = 'Draw';
-        }
-        else if(my_choice === 'Stump'  && computer_move === `Ball`){
-            result = 'You Loss';
-        }
-        else if(my_choice === 'Stump'  && computer_move === `Bat`){
-            result = 'You Won';
-        }
+        else if(my_choice === 'Ball'){
+            if(computer_move === `Bat`){
+                return `You Loss`;
+            }
+            else if(computer_move === `Ball`){
+                return `Draw`;
+            }
+            else{
+                return `You Won`;
+            }
+        } 
         else{
-            result = 'invalid!'
+            if(computer_move === `Bat`){
+                return `You Won`;
+            }
+            else if(computer_move === `Ball`){
+                return `You Loss`;
+            }
+            else{
+                return `Draw`;
+            }
         }
-
-        display.innerHTML = `Your move: ${my_choice} ~ Computer move: ${computer_move} <br> ${result}`;
     }
 
     
