@@ -18,84 +18,46 @@
 <body>
     
     <h1 id="name">Bat Ball Stump Game</h1>
+
+    <p id="score">Your Score: 0 </p>
     <button id="btn1" onclick="
         computer_choice = Computer();
         result = Result('Bat',computer_choice)
         display.innerHTML = `Your move: Bat ~ Computer move: ${computer_choice} <br> ${result}`;
+
+        score_result = Score(result);
+        console.log(score_result);
+        final_result = Score_error(score_result)
+        console.log(final_result);
+        score_display.innerHTML = `Your Score: ${final_result}`
+        
    
     " >Bat</button><button id="btn2" onclick="
         computer_choice = Computer();
         result = Result('Ball',computer_choice)
         display.innerHTML = `Your move: Ball ~ Computer move: ${computer_choice} <br> ${result}`;
+
+        score_result = Score(result);
+        console.log(score_result);
+        final_result = Score_error(score_result)
+        console.log(final_result);
+        score_display.innerHTML = `Your Score: ${final_result}`
+
     " >Ball</button><button id="btn3" onclick="
         computer_choice = Computer();
         result = Result('Stump',computer_choice) 
         display.innerHTML = `Your move: Stump ~ Computer move: ${computer_choice} <br> ${result}`;  
+
+        score_result = Score(result);
+        console.log(score_result);
+        final_result = Score_error(score_result)
+        console.log(final_result);
+        score_display.innerHTML = `Your Score: ${final_result}`
+
     " >Stump</button>
+
     <h1 id="display">  </h1>
 </body>
    
-<script>
-    
-    let display = document.querySelector("#display")
-    let computer_choice;
-    let result;
-    
-    function Computer(){
-        let number = Math.floor(Math.random()*10);
-          if ( number >= 0 && number <3){
-                return `Bat`;
-            }
-            else if ( number >=3 && number <6) {
-                return `Ball`;
-            } 
-            else if( number>=6 && number < 10){
-                return `Stump`;
-            }
-            else{
-                 return
-            }      
-    }
-    
-    
-
-    function Result(my_choice,computer_move){
-        if(my_choice === 'Bat'){
-            if(computer_move === `Bat`){
-                return `Draw`;
-            }
-            else if(computer_move === `Ball`){
-                return `You Won`;
-            }
-            else{
-                return `You Loss`;
-            }
-            
-        }
-        else if(my_choice === 'Ball'){
-            if(computer_move === `Bat`){
-                return `You Loss`;
-            }
-            else if(computer_move === `Ball`){
-                return `Draw`;
-            }
-            else{
-                return `You Won`;
-            }
-        } 
-        else{
-            if(computer_move === `Bat`){
-                return `You Won`;
-            }
-            else if(computer_move === `Ball`){
-                return `You Loss`;
-            }
-            else{
-                return `Draw`;
-            }
-        }
-    }
-
-    
-</script>
+<script src="cricket.js"></script>
 </html>
