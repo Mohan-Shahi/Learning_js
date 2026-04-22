@@ -19,17 +19,21 @@
     
     <h1 id="name">Bat Ball Stump Game</h1>
 
-    <p id="score">Your Score: 0 </p>
+    <p id="score">Your Score: 0 </p> <p id="computer_score">Computer Score: 0</p>
     <button id="btn1" onclick="
         computer_choice = Computer();
         result = Result('Bat',computer_choice)
         display.innerHTML = `Your move: Bat ~ Computer move: ${computer_choice} <br> ${result}`;
 
-        score_result = Score(result);
-        console.log(score_result);
+        score_result = Your_Score(result);
         final_result = Score_error(score_result)
-        console.log(final_result);
         score_display.innerHTML = `Your Score: ${final_result}`
+
+        computer_score_result = Computer_score(result);
+        console.log(computer_score_result)
+        let final_computer_result = Score_error_computer(computer_score_result);
+        console.log(final_computer_result);
+        computer_score_display.innerHTML=`Computer Score: ${final_computer_result} `;
         
    
     " >Bat</button><button id="btn2" onclick="
@@ -37,22 +41,30 @@
         result = Result('Ball',computer_choice)
         display.innerHTML = `Your move: Ball ~ Computer move: ${computer_choice} <br> ${result}`;
 
-        score_result = Score(result);
-        console.log(score_result);
+        score_result = Your_Score(result);
         final_result = Score_error(score_result)
-        console.log(final_result);
         score_display.innerHTML = `Your Score: ${final_result}`
+
+        computer_score_result = Computer_score(result);
+        console.log(computer_score_result)
+        final_computer_result = Score_error_computer(computer_score_result);
+        console.log(final_computer_result);
+        computer_score_display.innerHTML=`Computer Score: ${final_computer_result} `;
 
     " >Ball</button><button id="btn3" onclick="
         computer_choice = Computer();
         result = Result('Stump',computer_choice) 
         display.innerHTML = `Your move: Stump ~ Computer move: ${computer_choice} <br> ${result}`;  
 
-        score_result = Score(result);
-        console.log(score_result);
+        score_result = Your_Score(result);
         final_result = Score_error(score_result)
-        console.log(final_result);
         score_display.innerHTML = `Your Score: ${final_result}`
+
+        computer_score_result = Computer_score(result);
+        console.log(computer_score_result)
+        final_computer_result = Score_error_computer(computer_score_result);
+        console.log(final_computer_result);
+        computer_score_display.innerHTML=`Computer Score: ${final_computer_result} `;
 
     " >Stump</button>
 
