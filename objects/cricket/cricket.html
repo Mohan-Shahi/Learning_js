@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+</head>
+<style>
+    body button{
+        margin-right: 10px;
+        margin-left: 10px;
+        padding: 5px 40px;
+    }
+    #display{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    
+    <h1 id="name">Bat Ball Stump Game</h1>
+
+    <p id="score">Your Score: 0 <br> <br>
+                  Computer Score: 0 <br><br>
+                  Draw: 0 </p> <p id="computer_score"></p>
+    <button id="btn1" onclick="
+        computer_choice = Computer();
+        result = Result('Bat',computer_choice)
+        final_result(result,computer_choice,'Bat')
+
+        
+        
+   
+    " >Bat</button><button id="btn2" onclick="
+        computer_choice = Computer();
+        result = Result('Ball',computer_choice)
+        final_result(result,computer_choice,'Ball')
+
+        
+
+    " >Ball</button><button id="btn3" onclick="
+        computer_choice = Computer();
+        result = Result('Stump',computer_choice) 
+        final_result(result,computer_choice,'Stump') 
+
+       
+
+    " >Stump</button>
+
+    <h1 id="display">  </h1>
+</body>
+   
+<script src="cricket.js"></script>
+</html>
