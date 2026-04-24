@@ -1,0 +1,107 @@
+body{
+    margin:0;
+    background: linear-gradient(180deg, #e0f2fe 0%, #edf7fd 100%);
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+}
+.first_container{
+    display: flex;
+    justify-content: center;
+}
+.first_container h2{
+    color: rgb(125, 124, 123);
+}
+.second_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap: 40px;
+}
+
+.second_container .card{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 40px;
+    border: 2px solid white;
+    border-radius: 2px;
+    box-shadow: 2px 4px 10px rgba(130, 130, 130, 0.3);
+    height: 350px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease;
+    
+}
+.second_container .card:hover{
+    /* transform:translateY(-10px); */
+    border: 2px solid rgb(185, 185, 223);
+    border-radius: 2px;
+    transform: scale(1.05) translateY(-5px);
+}
+
+
+.header{
+    color: rgb(57, 57, 134);
+    width: 210px;
+    display: flex;
+    justify-content: center;
+}
+
+.imageContainer{
+    background-color: white;
+    box-shadow: 0px 4px 4px rgba(197, 196, 196, 0.3);
+    width: 200px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+}
+
+img{
+    margin-top: -10px;
+    /* border: 1px solid red; */
+    padding: 10px;
+    /* width: 200px; */
+    height: 150px;
+    object-fit:cover;
+}
+
+
+.card .discription{
+    width: 250px;
+    height: 70px;
+    font-family: cursive;
+}
+
+
+
+#discription2{
+    color: rgb(114, 105, 93);
+    margin-top: -15px;
+}
+
+button{
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: medium;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: rgb(69, 67, 63);
+    font-family:sans-serif;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover{
+    border:1px solid rgb(112, 180, 112);
+    transform: scale(0.96);
+}
+button:active{
+    transform: scale(1.02);
+}

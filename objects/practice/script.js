@@ -1,7 +1,7 @@
 let customer = {
     name : 'Mohan Shahi',
     age : 21,
-    gender : 'Female'
+    gender : 'Female '
 }
 
 let Any_offer = {
